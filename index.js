@@ -14,7 +14,7 @@ env.config();
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: "SECRETWORD", // fallback if env var is missing
     resave: false,
     saveUninitialized: true,
   })
@@ -29,7 +29,7 @@ const db = new pg.Client({
   user: "postgres",
   host: "db.qvxnkdzggijciklxjcgg.supabase.co",
   database: "postgres",
-  password: process.env.PG_PASSWORD,
+  password: "dagHvd56_09djcbhD3Gdgh",
   port: 5432,
   ssl: {
     rejectUnauthorized: false,
